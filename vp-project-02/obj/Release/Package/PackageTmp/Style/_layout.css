@@ -1,0 +1,139 @@
+﻿#header {
+    width: 100%;
+    /*border-bottom: 1px solid rgba(0,0,0,0.05);*/
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+    #header > button {
+        background: transparent;
+        font-family: 'Dosis', Arial;
+        border: transparent;
+        color: black;
+        padding: 25px 15px;
+        letter-spacing: 3px;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+
+        #header > button:first-child {
+            text-align: left;
+            color: black;
+        }
+
+            #header > button:first-child > .subpart {
+                color: black;
+                border-left: 1px solid black;
+                padding: 10px 8px;
+                margin-left: 10px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        #header > button:hover {
+            background: rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+
+        #header > button:active {
+            transition: 0.1s;
+            background: rgba(0,0,0,0.1);
+        }
+
+.search-container {
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    /*justify-content: center;*/
+    transition: 0.3s;
+}
+.search-container > h1 
+{
+    width: 100%;
+    text-align: center;
+    letter-spacing: 5px;
+    padding: 10px;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+}
+.search-container > div
+{
+    text-align: center;
+    width: 100%;
+}
+.RESULT-CONT {
+    border-collapse: collapse;
+    width: 95%;
+    margin: auto;
+    background-color: rgba(0,0,0,0.01);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.04);
+}
+.RESULT-CONT th,
+.RESULT-CONT td
+{
+    animation-name: ANIMATE01;
+    animation-duration: 0.4s;
+
+}
+.RESULT-CONT th
+{
+    text-align: left;
+    font-size: 20px;
+    padding: 25px;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.RESULT-CONT td
+{
+    padding: 20px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+#footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /*border-top: 1px solid rgba(0,0,0,0.1);*/
+    justify-content: flex-end;
+}
+
+    #footer > ._one {
+        width: 95%;
+        margin: 10px 0px;
+    }
+
+        #footer > ._one > button {
+            background: transparent;
+            border: transparent;
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+        }
+
+    #footer > ._two {
+        width: 95%;
+        margin: 20px 0px;
+        /*border-top: 1px solid rgba(0,0,0,0.1);*/
+    }
+
+    #footer > ._three {
+        width: 100%;
+        padding: 10px 20px;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        text-align: right;
+    }
+
+.search-field1 {
+    position: absolute;
+    background-color: black;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+    .search-field1 > p {
+        color: white;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+

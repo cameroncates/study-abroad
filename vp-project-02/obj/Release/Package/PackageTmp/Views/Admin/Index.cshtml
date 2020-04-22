@@ -1,0 +1,43 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/admin.css")">
+}
+@section title
+{
+    Admin Home Page
+}
+
+<div class="ADMIN">
+    <h1>Welcome to Admin Panel &nbsp; &#128273; &nbsp;</h1>
+    <h2>&#10798; &nbsp; ADD DATA</h2>
+    <p class="click-01"
+       onclick="window.open('/ADMIN/ADD_FIELD','_self')">
+        <b>ADD FIELD</b> &#8674;<br><br>
+        <span> Add A Specefic Field that has decent amount of courses</span>
+    </p>
+    <p class="click-01"
+       onclick="window.open('/ADMIN/ADD_COURSE','_self')">
+        <b>ADD COURSE</b> &#8674;<br><br>
+        <span> Add a course into a database that is related to the specefic field</span>
+    </p>
+    <p class="click-01">
+        <b>ADD COUNTRY</b> &#8674;<br><br>
+        <span> Add a country that contains higher education System</span>
+    </p>
+    <p class="click-01"
+       onclick="window.open('/ADMIN/ADD_UNIVERSITY','_self')">
+        <b>ADD UNIVERSITY</b> &#8674;<br><br>
+        <span> Add a university that currently offers decents amount of programs for aborad students</span>
+    </p>
+    <p class="click-01"
+       onclick="window.open('/ADMIN/ADD_DEGREE','_self')">
+        <b>ORGANIZE NEW DEGREE</b>  &#8674;<br><br>
+        <span> Organize a new degree based on the country where it offers, university name and the type of the program</span>
+    </p>
+    <h2>&#10805; &nbsp; DELETE DATA</h2>
+    <p class="click-01"
+       onclick="window.open('/ADMIN/DELETE_FIELD','_self')">
+        <b>DELETE FIELD</b>  &#8674;<br><br>
+        <span> Delete a field that you think no longer exists or that has no courses yet</span>
+    </p>
+</div>

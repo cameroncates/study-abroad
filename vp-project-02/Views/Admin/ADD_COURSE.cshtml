@@ -1,0 +1,40 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/admin.css")">
+}
+@section title
+{
+    Admin - Add Course
+}
+
+
+@section HEADER_TITLE
+{
+    Add Course
+}
+@section HEADER_DESC
+{
+    Add a course into a database that is related to the specefic field
+}
+<br><br>
+@using (Html.BeginForm())
+{
+    <br>
+
+    <p><b>&#9642; &nbsp; Enter Course Title</b></p>
+    <input class="CENTER" type="text" placeholder="&#9642; &nbsp; Enter Course" name="title"
+    onkeyup="V._VALIDATE_STRING(this)">
+    <label class="ERROR_MSG">*</label>
+    
+    <br>
+    <p><b>&#9642; &nbsp; Choose Field</b></p>
+    <select name="id">
+        @foreach (var COURSE in ViewBag.GET_ALL_COURSE)
+        {
+            <option value="@COURSE.id">@COURSE.title</option>
+        }
+    </select>
+    <br>
+    <input type="submit" class="DISABLED CENTER" value="SAVE  &#8674;" disabled>
+    <br>
+}

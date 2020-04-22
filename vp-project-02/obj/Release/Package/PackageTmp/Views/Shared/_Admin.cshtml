@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="@Url.Content("~/Style/_layout.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Style/_elem.css")">
+    @RenderSection("styleFile", required: false)
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/HTML_ELEMS.js"></script>
+    <title>@RenderSection("title", required: true)</title>
+</head>
+<body>
+    <header id="header">
+        <button class="home-btn" style="flex-grow: 12"
+                onclick="window.open('/Home','_self')">
+                Study<span class="subpart">Abroad &#128746;</span>
+        </button>
+    </header>
+    <br>
+    <div class="CONTAINER">
+        <h1>@RenderSection("HEADER_TITLE", required: false)</h1>
+        <p>@RenderSection("HEADER_DESC", required: false)</p>
+
+    </div>
+    @RenderBody()
+
+    <br><br>
+    <footer id="footer">
+        <div class="_three">
+            <p>&copy; 2019 Study<b>Abroad</b> &#128746; Ltd All rights reserved</p>
+        </div>
+    </footer>
+     <script src="~/Scripts/VALIDATIONS.js"></script>
+</body>
+</html>

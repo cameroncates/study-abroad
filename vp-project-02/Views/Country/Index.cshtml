@@ -1,0 +1,43 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/country.css")">
+}
+@section title
+{
+    Country
+}
+@section pageTitle
+{
+    Let's Find A Perfect Course For You&nbsp; &#128366;
+}
+@section field1
+{
+    &#9642; &nbsp;  Field
+}
+@section field2
+{
+    &#9642; &nbsp; Country &nbsp; &#9872;
+}
+@section field3
+{
+    &#9642; &nbsp; Graduation Level
+}
+<br><br><br><br>
+<div class="COUNTRY">
+        @foreach (var COUNTRY in ViewBag.GET_LIMITED_COUNTRY)
+        {
+            <div>
+                <img src="~/Images/Countries/@(COUNTRY.TITLE).jpg">
+                <h1>@COUNTRY.TITLE  &#9872;</h1>
+                <p>&nbsp;  &#9642; &nbsp; Containing @COUNTRY.UNIVERSITY_COUNT.Count Universities</p>
+                <p>&nbsp;  &#9642; &nbsp; Offering @COUNTRY.DEGREE_COUNT.Count Degree</p>
+                @if(COUNTRY.DEGREE_COUNT.Count > 0)
+                {
+                    <button class="light-btn"
+                            onclick="window.open('/DEGREE?COUNTRY_ID=@COUNTRY.ID','_self')">VIEW DETAILS &#8674;</button>
+                }
+                <br>
+            </div>
+        }
+
+</div>

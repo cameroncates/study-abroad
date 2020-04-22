@@ -1,0 +1,45 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/admin.css")">
+}
+@section title
+{
+    Admin - Add University
+}
+
+
+@section HEADER_TITLE
+{
+    Add University
+}
+@section HEADER_DESC
+{
+    Add a university that currently offers decents amount of programs for aborad students
+}
+<br><br>
+@using (Html.BeginForm())
+{
+    <br>
+    <p><b>&#9642; &nbsp; Enter University Title</b></p>
+    <input class="CENTER" type="text" placeholder="&#9642; &nbsp; i.e. COMSATS, Isl" name="TITLE"
+    onkeyup="V._VALIDATE_STRING(this)">
+    <label class="ERROR_MSG">*</label>
+    
+    <br>
+    <p><b>&#9642; &nbsp; Enter Location</b></p>
+    <input class="CENTER" type="text" placeholder="&#9642; &nbsp; Street 11-i/ sector G" name="LOCATION"
+    onkeyup="V._VALIDATE_STRING(this)">
+    <label class="ERROR_MSG">*</label>
+    
+    <br>
+    <p><b>&#9642; &nbsp; Choose Country Where It is located</b></p>
+    <select name="COUNTRY_ID">
+        @foreach (var COURSE in ViewBag.GET_ALL_COUNTRY)
+        {
+            <option value="@COURSE.id">@COURSE.title</option>
+        }
+    </select>
+    <br>
+    <input type="submit" class="DISABLED CENTER" value="SAVE  &#8674;" disabled>
+    <br>
+}

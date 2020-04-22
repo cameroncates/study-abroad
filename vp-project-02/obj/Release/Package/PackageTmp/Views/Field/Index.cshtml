@@ -1,0 +1,60 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/field.css")">
+}
+@section title
+{
+     Fields
+}
+@section pageTitle
+{
+    Let's Find A Perfect Course For You&nbsp; &#128366;
+}
+@section field1
+{
+    &#9642; &nbsp; Field
+}
+@section field2
+{
+    &#9642; &nbsp; Country
+}
+@section field3
+{
+    &#9642; &nbsp; Graduation Level
+}
+<br><br><br><br>
+<div class="FIELD">
+        @foreach (var FIELD in ViewBag.GET_LIMITED_FIELD)
+        {
+            bool NO_COURSE = false;
+            if (FIELD.courseTitle.Count == 0)
+            {
+                NO_COURSE = true;
+            }
+            <div>
+                <h1>@FIELD.title</h1>
+                <h4>&#9642; Contains <b>@FIELD.courseTitle.Count</b> Courses</h4>
+                @if(!NO_COURSE)
+                {
+                    <button class="light-btn" id="_@FIELD.id" onclick="field.TOGGLE_COURSES('@FIELD.id', this)">SHOW COURSES &#x21e3;</button>
+                    <br>
+                }
+                <div class="COURSES" id="@FIELD.id">
+                    @if (NO_COURSE)
+                    {
+                        <p>No course found</p>
+                    }
+                    else
+                    {
+                        foreach (var COURSE in FIELD.courseTitle)
+                        {
+                            <p class="click-01" 
+                               onclick="window.open('/Degree?COURSE_ID=@COURSE.id&FIELD_ID=@FIELD.id','_self')">&#9656; @COURSE.title</p>
+                        }
+                    }
+                </div>
+            </div>
+            <br><br>
+         }
+</div>
+<script src="~/Scripts/Field.js"></script>

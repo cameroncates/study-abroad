@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="@Url.Content("~/Style/_layout.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Style/_elem.css")">
+    @RenderSection("styleFile", required: false)
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/HTML_ELEMS.js"></script>
+    <title>@RenderSection("title", required: true)</title>
+</head>
+<body>
+    <header id="header">
+        <button class="home-btn" style="flex-grow: 12"
+                onclick="window.open('/Home','_self')">
+                Study<span class="subpart">Abroad &#128746;</span>
+        </button>
+    </header>
+    <div class="ADMIN">
+        <h1>Welcome to Admin Panel &nbsp; &#128273; &nbsp;</h1>
+        <h2>&#10798; &nbsp; ADD DATA</h2>
+        <button class="light-btn"
+                onclick="window.open('/ADMIN/ADD_FIELD','_self')">
+            &#10004; ADD FIELD &#8674;
+        </button>
+        <button class="light-btn"
+                onclick="window.open('/ADMIN/ADD_COURSE','_self')">&#10004; ADD COURSE &#8674;</button>
+        <button class="light-btn">ADD COUNTRY &#8674;</button>
+        <button class="light-btn"
+                onclick="window.open('/ADMIN/ADD_UNIVERSITY','_self')">&#10004; ADD UNIVERSITY &#8674;</button>
+        <button class="light-btn"
+                onclick="window.open('/ADMIN/ADD_DEGREE','_self')">&#10004; ORGANIZE NEW DEGREE  &#8674;</button>
+        <h2>&#10805; &nbsp; DELETE DATA</h2>
+        <button class="light-btn"
+                onclick="window.open('/ADMIN/DELETE_FIELD','_self')">
+            &#10004; DELETE FIELD  &#8674;
+        </button>
+    </div>
+    @RenderBody()
+
+    <br><br>
+    <footer id="footer">
+        <div class="_three">
+            <p>&copy; 2019 Study<b>Abroad</b> &#128746; Ltd All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

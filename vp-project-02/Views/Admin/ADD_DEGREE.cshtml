@@ -1,0 +1,61 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/admin.css")">
+}
+@section title
+{
+    Admin - Add Degree
+}
+@section HEADER_TITLE
+{
+    Add Degree
+}
+@section HEADER_DESC
+{
+    Organize a new degree based on the country where it offers, university name and the type of the program
+}
+<br><br>
+@using (Html.BeginForm())
+{
+    <br>
+    <p><b>&#9642; &nbsp; Title</b></p>
+    <input class="CENTER" type="text" placeholder="&#9642; &nbsp; Enter Degree Title" name="DEGREE_TITLE"
+    onkeyup="V._VALIDATE_STRING(this)">
+    <label class="ERROR_MSG">*</label>
+    <br>
+    <br>
+    <p><b>&#9642; &nbsp; Graduation Level</b></p>
+    <select name="GRADUATION">
+        <option value="undergraduate">Undergraduate</option>
+        <option value="undergraduate">graduate</option>
+    </select>
+    <br>
+    <p><b>&#9642; &nbsp; Degree Duration</b></p>
+    <select name="DURATION">
+        <option value="5 Years">5 Years</option>
+        <option value="4 Years">4 Years</option>
+        <option value="3 Years">3 Years</option>
+        <option value="2 Years">2 Years</option>
+    </select>
+
+    <br>
+    <p><b>&#9642; &nbsp; Specify Course</b></p>
+    <select name="COURSE_ID">
+        @foreach (var COURSE in ViewBag.GET_ALL_COURSES)
+        {
+            <option value="@COURSE.id">@COURSE.title</option>
+        }
+    </select>
+
+    <br>
+    <p><b>&#9642; &nbsp; Choose University</b></p>
+    <select name="UNIVERSITY_ID">
+        @foreach (var UNIVERSITY in ViewBag.GET_ALL_UNIVERSITY)
+        {
+            <option value="@UNIVERSITY.id">@UNIVERSITY.title</option>
+        }
+    </select>
+    <br>
+    <input type="submit" class="DISABLED CENTER" value="SAVE  &#8674;" disabled>
+    <br>
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="61dd8114850140f595e9b785aaaef1b0" Name="Diagram1">
+        <EntityTypeShape EntityType="vpprojectDBModel.Country" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="vpprojectDBModel.Cours" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="vpprojectDBModel.Degree" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="vpprojectDBModel.Field" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="vpprojectDBModel.University" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="vpprojectDBModel.FK_Universities_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="vpprojectDBModel.FK_Courses_Fields" ManuallyRouted="false" />
+        <AssociationConnector Association="vpprojectDBModel.FK_Degreess_Courses" ManuallyRouted="false" />
+        <AssociationConnector Association="vpprojectDBModel.FK_Degreess_Universities" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

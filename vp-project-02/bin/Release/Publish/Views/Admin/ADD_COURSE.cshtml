@@ -1,0 +1,27 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/admin.css")">
+}
+@section title
+{
+    Admin - Add Course
+}
+<br><br>
+@using (Html.BeginForm())
+{
+    <br>
+
+    <p><b>&#9642; &nbsp; Enter Course Title</b></p>
+    <input class="CENTER" type="text" placeholder="&#9642; &nbsp; Enter Course" name="title">
+    <br>
+    <p><b>&#9642; &nbsp; Choose Course</b></p>
+    <select name="id">
+        @foreach (var COURSE in ViewBag.GET_ALL_COURSE)
+        {
+            <option value="@COURSE.id">@COURSE.title</option>
+        }
+    </select>
+    <br>
+    <input type="submit" class="dark-btn CENTER" value="SAVE  &#8674;">
+    <br>
+}

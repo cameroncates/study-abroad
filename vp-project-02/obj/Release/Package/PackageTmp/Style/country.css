@@ -1,0 +1,40 @@
+﻿.COUNTRY
+{
+    /*border: 1px solid rgba(0,0,0,0.1);*/
+}
+.COUNTRY
+{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.COUNTRY > div
+{
+    width: 500px;
+    margin: 30px;
+    align-self: flex-start;
+    background-color: rgba(0,0,0,0.01);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.08);
+}
+
+.COUNTRY > div > img
+{
+    width: 100%;
+}
+.COUNTRY > div > h1
+{
+    margin: 20px;
+    padding: 20px;
+    font-weight: lighter;
+}
+.COUNTRY > div > p
+{
+    padding: 5px 20px;
+}
+.COUNTRY > div > button
+{
+    float: right;
+    margin: 20px;
+}

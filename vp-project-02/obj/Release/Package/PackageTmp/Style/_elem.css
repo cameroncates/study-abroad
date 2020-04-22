@@ -1,0 +1,105 @@
+﻿body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Dosis', Arial;
+    letter-spacing: 3px;
+}
+h3
+{
+    font-weight: lighter;
+}
+
+input[type='text'],
+select 
+{
+    padding: 15px;
+    margin: 2px 10px;
+    width: 250px;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: 0.3s;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.05);
+}
+
+    input[type='text']:focus
+    ,select:focus 
+    {
+        box-shadow: 7px 7px 10px rgba(0,0,0,0.08);
+        background-color: rgba(0,0,0,0.01);
+        border: 1px solid rgba(0,0,0,0.2);
+        /*background-color: black;*/
+        /*color: white;*/
+        padding: 20px;
+    }
+
+.dark-btn,
+.light-btn,
+.DISABLED
+{
+    padding: 15px 30px;
+    text-decoration: none;
+    margin: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.06);
+}
+.dark-btn,
+.light-btn:hover
+{
+    background-color: black;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.dark-btn:hover,
+.light-btn:hover
+{
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+
+}
+.dark-btn:hover, 
+.light-btn 
+{
+    color: black;
+    border: 1px solid black;
+    background: transparent;
+}
+
+.dark-btn:active,
+.light-btn:active 
+{
+    transition: 0.1s;
+    transform: scale(0.95);
+}
+.click-01:hover
+{
+    transition: 0.3s;
+    background-color: rgba(0,0,0,0.04);
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.07);
+    cursor: pointer;
+}
+.click-01:active
+{
+    transition: 0.1s;
+    background-color: rgba(0,0,0,0.08);
+}
+@keyframes ANIMATE01 
+{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.DISABLED
+{
+    background-color: rgba(0,0,0,0.1);
+    border: transparent;
+}
+.DISABLED:hover
+{
+    cursor: not-allowed;
+}

@@ -1,0 +1,42 @@
+﻿.DEGREE
+{
+    border: 1px solid rgba(0,0,0,0.04);
+}
+.DEGREE
+{
+    width: 90%;
+    margin: auto;
+}
+.DEGREE > div
+{
+    background-color: rgba(0,0,0,0.01);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.04);
+    margin: 20px 10px;
+    margin-bottom: 50px;
+    padding: 30px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.DEGREE > div > h1
+{
+    padding: 0px 10px;
+    margin-bottom:7px;
+    font-weight: bold;
+}
+.DEGREE > div > h4
+{
+    padding: 0px 10px;
+    margin-top:0px;
+    padding-bottom: 20px;
+    font-weight: lighter;
+}
+
+.DEGREE > div > p
+{
+    padding: 5px 10px;
+}
+.DEGREE > div > button
+{
+    float: right;
+}
+

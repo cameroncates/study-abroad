@@ -1,0 +1,32 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/admin.css")">
+}
+@section title
+{
+    Admin - Delte Field
+}
+
+
+@section HEADER_TITLE
+{
+    Delete Field
+}
+@section HEADER_DESC
+{
+    Delete a field that you think no longer exists or that has no courses yet
+}
+<br><br>
+@foreach (var FIELD in ViewBag.GET_FIELD)
+{
+    using (Html.BeginForm())
+    {
+        <div>
+            <input type="hidden" value="@FIELD.id" name="id">
+            <input type="button" value="&#9642; &nbsp; @FIELD.title" name="title">
+            <input type="submit" value="DELETE &nbsp; &#8674;" class="dark-btn DELETE">
+        </div>
+
+    }
+
+}

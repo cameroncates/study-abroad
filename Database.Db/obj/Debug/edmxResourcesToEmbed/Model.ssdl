@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="vpprojectDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Countries">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Courses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="50" />
+    <Property Name="FieldId" Type="int" />
+  </EntityType>
+  <EntityType Name="Degrees">
+    <Key>
+      <PropertyRef Name="degreeId" />
+    </Key>
+    <Property Name="degreeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="degreeTitle" Type="varchar" MaxLength="200" />
+    <Property Name="duration" Type="varchar" MaxLength="100" />
+    <Property Name="graduation" Type="varchar" MaxLength="50" />
+    <Property Name="courseId" Type="int" />
+    <Property Name="universityId" Type="int" />
+  </EntityType>
+  <EntityType Name="Fields">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Universities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="100" />
+    <Property Name="countryId" Type="int" Nullable="false" />
+    <Property Name="location" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK_Courses_Fields">
+    <End Role="Fields" Type="Self.Fields" Multiplicity="0..1" />
+    <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fields">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="FieldId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Degreess_Courses">
+    <End Role="Courses" Type="Self.Courses" Multiplicity="0..1" />
+    <End Role="Degrees" Type="Self.Degrees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Degrees">
+        <PropertyRef Name="courseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Degreess_Universities">
+    <End Role="Universities" Type="Self.Universities" Multiplicity="0..1" />
+    <End Role="Degrees" Type="Self.Degrees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Universities">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Degrees">
+        <PropertyRef Name="universityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Universities_Countries">
+    <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+    <End Role="Universities" Type="Self.Universities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Universities">
+        <PropertyRef Name="countryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="vpprojectDBModelStoreContainer">
+    <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Degrees" EntityType="Self.Degrees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fields" EntityType="Self.Fields" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Universities" EntityType="Self.Universities" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Courses_Fields" Association="Self.FK_Courses_Fields">
+      <End Role="Fields" EntitySet="Fields" />
+      <End Role="Courses" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Degreess_Courses" Association="Self.FK_Degreess_Courses">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="Degrees" EntitySet="Degrees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Degreess_Universities" Association="Self.FK_Degreess_Universities">
+      <End Role="Universities" EntitySet="Universities" />
+      <End Role="Degrees" EntitySet="Degrees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Universities_Countries" Association="Self.FK_Universities_Countries">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="Universities" EntitySet="Universities" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

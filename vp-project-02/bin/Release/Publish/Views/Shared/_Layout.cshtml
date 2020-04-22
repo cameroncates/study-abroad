@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="@Url.Content("~/Style/_layout.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Style/_elem.css")">
+    @RenderSection("styleFile", required: false)
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/HTML_ELEMS.js"></script>
+    <title>@RenderSection("title", required: true)</title>
+</head>
+<body>
+    <header id="header">
+        <button class="home-btn" style="flex-grow: 12"
+                onclick="window.open('./Home','_self')">
+            Study<span class="subpart">Abroad</span>&#128746;</button>
+        <button class="BY-COURSES" style="flex-grow: 1">Filter By Course</button>
+        <button style="flex-grow: 1"
+                onclick="window.open('./Admin','_self')">&#128273; &nbsp; Admin Panel</button>
+    </header>
+    <div class="search-container">
+        <h1>@RenderSection("pageTitle", required: false)</h1>
+        <div>
+            <input type="text" placeholder="@RenderSection("field1", required: true)"
+                   class="field1">
+            <input type="text" placeholder="@RenderSection("field2", required: true)"
+                   class="field2">
+            <input type="text" placeholder="@RenderSection("field3", required: true)"
+                   class="field3">
+            <button class="dark-btn search-btn">SEARCH &#8674;</button>
+        </div>
+
+    </div>
+    <table class="RESULT-CONT"></table>
+
+    @RenderBody()
+
+    <br><br><br><br>
+    <footer id="footer">
+        <div class="_one">
+            <h1>UseFul Links</h1>
+            <button>&#9642; &nbsp; Cookies</button>
+            <button>&#9642; &nbsp; Site Map</button>
+            <button>&#9642; &nbsp; Terms And Conditions</button>
+        </div>
+        <div class="_two">
+            <h1>Follow Us</h1>
+            <button class="light-btn">Facebook &#8674;</button>
+            <button class="light-btn">Twitter &#8674;</button>
+            <button class="light-btn">Instagram  &#8674;</button>
+            <button class="light-btn">Youtube  &#8674;</button>
+        </div>
+        <div class="_three">
+            <p>&copy; 2019 StudyAbroad &#128746; Ltd All rights reserved</p>
+        </div>
+    </footer>
+    <script src="~/Scripts/_layout/search.js"></script>
+</body>
+</html>

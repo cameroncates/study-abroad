@@ -1,0 +1,6 @@
+E:\Visual-Programming-Course\vp-project-02\vp-project.Models\bin\Release\vp-project.Models.dll
+E:\Visual-Programming-Course\vp-project-02\vp-project.Models\bin\Release\vp-project.Models.pdb
+E:\Visual-Programming-Course\vp-project-02\vp-project.Models\obj\Release\vp-project.Models.csprojAssemblyReference.cache
+E:\Visual-Programming-Course\vp-project-02\vp-project.Models\obj\Release\vp-project.Models.csproj.CoreCompileInputs.cache
+E:\Visual-Programming-Course\vp-project-02\vp-project.Models\obj\Release\vp-project.Models.dll
+E:\Visual-Programming-Course\vp-project-02\vp-project.Models\obj\Release\vp-project.Models.pdb

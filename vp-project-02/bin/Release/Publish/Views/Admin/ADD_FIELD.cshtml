@@ -1,0 +1,19 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/admin.css")">
+}
+@section title
+{
+    Admin - Add Field
+}
+<br><br>
+
+@using (Html.BeginForm())
+{
+    <br>
+    <p><b>&#9642; &nbsp; Enter Field Name</b></p>
+    <input class="CENTER" type="text" placeholder="&#9642; &nbsp; i.e. Computer Science" name="title">
+    <br>
+    <input type="submit" class="dark-btn CENTER" value="SAVE  &#8674;">
+    <br>
+}

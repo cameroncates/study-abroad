@@ -1,0 +1,87 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/home.css")">
+}
+@section title
+{
+    Home
+}
+@section pageTitle
+{
+    Let's Find A Perfect Course For You&nbsp; &#128366;
+}
+@section field1
+{
+    &#9642; &nbsp;  Field
+}
+@section field2
+{
+    &#9642; &nbsp; Country
+}
+@section field3
+{
+    &#9642; &nbsp; Graduation Level
+}
+
+<br><br><br><br>
+<div class="home">
+    <h1>Unsure what to study? &#129300;</h1>
+    <h3>Have a look here...</h3>
+
+    <div class="field-cont">
+        @foreach (var FIELD in ViewBag.GET_LIMITED_FIELD)
+        {
+            bool NO_COURSE = false;
+            if (FIELD.courseTitle.Count == 0)
+            {
+                NO_COURSE = true;
+            }
+            <div>
+                <h2>@FIELD.title</h2>
+                @if (NO_COURSE)
+                {
+                    <p> &nbsp; &#9642; &nbsp;Currently Include No Offerings</p>
+                }
+                else
+                {
+                    foreach (var COURSE in FIELD.courseTitle)
+                    {
+                        <p class="click-01"
+                           onclick="window.open('/Degree?COURSE_ID=@COURSE.id&FIELD_ID=@FIELD.id','_self')">&#9656; @COURSE.title</p>
+                    }
+                    if(FIELD.courseTitle.Count > 3)
+                    {
+                        <button class="light-btn"
+                        onclick="window.open('./Field#@FIELD.id','_self')">VIEW ALL &#8674;</button>
+                    }
+                }
+            </div>
+
+        }
+    </div>
+
+    <button class="light-btn"
+            onclick="window.open('./Field','_self')">
+        VIEW ALL FIELDS &#8674;
+    </button>
+</div>
+<br><br><br><br>
+<div class="home">
+    <h1>Unsure where to study?</h1>
+    <h3>Here are the most popular searches</h3>
+
+    <div class="country-cont">
+        @foreach (var COUNTRY in ViewBag.GET_LIMITED_COUNTRY)
+        {
+            <div>
+                <img src="~/Images/Countries/@(COUNTRY.title).jpg">
+                <p class="light-btn"
+                 onclick="window.open('/DEGREE?COUNTRY_ID=@COUNTRY.id','_self')">@COUNTRY.title</p>
+            </div>
+        }
+    </div>
+
+    <button class="light-btn"
+            onclick="window.open('/Country','_self')">VIEW ALL COUNTRIES &#8674;</button>
+
+</div>

@@ -1,0 +1,101 @@
+﻿.ADMIN,
+form,
+form > select 
+{
+    border: 1px solid rgba(0,0,0,0.05);
+    margin: 5px;
+}
+.ADMIN
+{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ADMIN > h1,
+.ADMIN > h2
+{
+    width: 100%;
+    padding: 15px 25px;
+ 
+}
+.ADMIN > h1
+{
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.ADMIN > p
+{
+    margin: 20px;
+    width: 350px;
+    padding: 50px 20px;
+    background-color: rgba(0,0,0,0.01);
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.03);
+    font-size: 30px;
+    text-align: center;
+
+}
+.ADMIN > p > span
+{
+    font-size: 18px;
+    color: rgba(0,0,0,0.7);
+}
+form 
+{
+    width: 90%;
+    margin: auto;
+    background: rgba(0,0,0,0.01);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.03);
+    border: transparent;
+}
+form > .CENTER,
+form > select,
+form > p
+{
+    display: block;
+    /*margin: auto;*/
+    margin: 20px 30px;
+}
+form > input[type='text']
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+form > input[type='button'],
+form > div > input[type='button']
+{
+    padding: 20px;
+    background: transparent;
+    border: transparent;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+form > .DELETE
+{
+    float: right;
+    clear: both;
+}
+form > select
+{
+    padding: 20px;
+}
+.CONTAINER 
+{
+    width: 90%;
+    margin: 50px auto;
+}
+.ERROR_MSG
+{
+    color: #f44e42;
+}
+form > div
+{
+    overflow: hidden;
+    margin: 20px;
+}
+form > div > input[type='submit']
+{
+    float: right;
+}

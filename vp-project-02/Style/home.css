@@ -1,0 +1,102 @@
+﻿.home,
+.field-cont,
+.country-cont > div 
+{
+    /*border: 1px solid rgba(0,0,0,0.1);*/
+    margin: 5px;
+}
+.home
+{
+    width: 95%;
+    margin: 20px auto;
+}
+.home > h1,
+.home > h3
+{
+    text-align: center;
+}
+.field-cont
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.field-cont > div
+{
+    margin: 30px;
+    width: 400px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.08);
+    background-color: rgba(0,0,0,0.01);
+    align-self: flex-start;
+}
+.field-cont > div > h2
+{
+    margin: 0px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.06);
+    background-color: rgba(0,0,0,0.02);
+    padding: 30px;
+}
+.field-cont > div > p
+{
+    margin: 0px;
+    padding: 20px 20px;
+}
+.field-cont > div > button
+{
+    margin: 20px;
+    float: right;
+}
+.home > button 
+{
+    padding: 20px 40px;
+    display: block;
+    margin: 50px auto;
+}
+
+.country-cont
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.country-cont > div
+{
+    display: flex;
+    justify-content: center;
+    width: 360px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.04);
+}
+.country-cont > div > img
+{
+    width: 100%;
+    position: absolute;
+    transition: 0.3s;
+    z-index: -1;
+    opacity: 1;
+}
+.country-cont > div > p
+{
+    align-self: center;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.country-cont > div:hover > img
+{
+    opacity: 0;
+}
+.country-cont > div:hover > p
+{
+    transition: 0.3s;
+    opacity: 1;
+    transform: translateY(0px);
+}
+.field-cont > div,
+.country-cont > div 
+{
+    animation-name: ANIMATE01;
+    animation-duration: 0.4s;
+}

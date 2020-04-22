@@ -1,0 +1,14 @@
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Release\Database.Db.dll.config
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Release\Database.Db.dll
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Release\Database.Db.pdb
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Release\EntityFramework.dll
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Release\EntityFramework.SqlServer.dll
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Release\vp-project.Models.dll
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Release\vp-project.Models.pdb
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Release\EntityFramework.xml
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Release\EntityFramework.SqlServer.xml
+E:\Visual-Programming-Course\vp-project-02\Database.Db\obj\Release\vp-project.Database.csprojAssemblyReference.cache
+E:\Visual-Programming-Course\vp-project-02\Database.Db\obj\Release\vp-project.Database.csproj.CoreCompileInputs.cache
+E:\Visual-Programming-Course\vp-project-02\Database.Db\obj\Release\vp-project.Database.csproj.CopyComplete
+E:\Visual-Programming-Course\vp-project-02\Database.Db\obj\Release\Database.Db.dll
+E:\Visual-Programming-Course\vp-project-02\Database.Db\obj\Release\Database.Db.pdb

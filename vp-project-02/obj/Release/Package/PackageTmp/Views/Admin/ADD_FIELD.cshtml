@@ -1,0 +1,32 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/admin.css")">
+}
+@section title
+{
+    Admin - Add Field
+}
+
+@section HEADER_TITLE
+{
+    Add Field
+}
+@section HEADER_DESC
+{
+    Add A Specefic Field that has decent amount of courses
+}
+
+<br><br>
+
+@using (Html.BeginForm())
+{
+    <br>
+    <p><b>&#9642; &nbsp; Enter Field Name</b></p>
+    <input class="CENTER" type="text" placeholder="&#9642; &nbsp; i.e. Computer Science" name="title"
+    onkeyup="V._VALIDATE_STRING(this)">
+    <label class="ERROR_MSG">*</label>
+    
+    <br>
+    <input type="submit" class="DISABLED CENTER" value="SAVE  &#8674;" disabled>
+    <br>
+}

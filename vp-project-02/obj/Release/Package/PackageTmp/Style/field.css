@@ -1,0 +1,52 @@
+﻿.FIELD,
+.FIELD > div
+{
+    /*border: 1px solid rgba(0,0,0,0.03);*/
+}
+.FIELD
+{
+    width: 90%;
+    margin:  auto;
+}
+.FIELD > div
+{
+    margin: 20px 10px;
+    padding: 30px 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.01);
+}
+.FIELD > div > h1,
+.FIELD > div > h4
+{
+    padding: 10px;
+    margin: 5px;
+}
+.FIELD > div > h4
+{
+    font-weight: lighter;
+    padding-top: 0px;
+    font-size:13px;
+}
+.FIELD > div > button
+{
+    float: right;
+    padding: 10px 20px;
+    margin: 5px;
+    display: block;
+}
+.FIELD > div > .COURSES 
+{
+    max-height: 0px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.FIELD > div > .COURSES > p
+{
+    margin: 0px;
+    padding: 20px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}

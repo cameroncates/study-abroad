@@ -1,0 +1,6 @@
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Debug\Database.Db.dll
+E:\Visual-Programming-Course\vp-project-02\Database.Db\bin\Debug\Database.Db.pdb
+E:\Visual-Programming-Course\vp-project-02\Database.Db\obj\Debug\Database.Db.csprojAssemblyReference.cache
+E:\Visual-Programming-Course\vp-project-02\Database.Db\obj\Debug\Database.Db.csproj.CoreCompileInputs.cache
+E:\Visual-Programming-Course\vp-project-02\Database.Db\obj\Debug\Database.Db.dll
+E:\Visual-Programming-Course\vp-project-02\Database.Db\obj\Debug\Database.Db.pdb

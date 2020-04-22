@@ -1,0 +1,61 @@
+﻿.ADMIN,
+form,
+form > select 
+{
+    border: 1px solid rgba(0,0,0,0.05);
+    margin: 5px;
+}
+.ADMIN
+{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ADMIN > h1,
+.ADMIN > h2
+{
+    width: 100%;
+    padding: 15px 25px;
+ 
+}
+.ADMIN > h1
+{
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.ADMIN > button
+{
+    margin: 10px;
+}
+form 
+{
+    width: 90%;
+    margin: auto;
+}
+form > .CENTER,
+form > select,
+form > p
+{
+    display: block;
+    /*margin: auto;*/
+    margin: 20px 30px;
+}
+form > input[type='button']
+{
+    padding: 20px;
+    background: transparent;
+    border: transparent;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+form > .DELETE
+{
+    float: right;
+    clear: both;
+}
+form > select
+{
+    padding: 20px;
+}

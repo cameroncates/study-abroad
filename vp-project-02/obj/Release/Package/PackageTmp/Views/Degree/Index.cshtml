@@ -1,0 +1,60 @@
+﻿@section styleFile
+{
+    <link rel="stylesheet" href="@Url.Content("~/Style/degree.css")">
+}
+@section title
+{
+    Degrees
+}
+@section pageTitle
+{
+    Let's Find A Perfect Course For You&nbsp; &#128366;
+}
+@section field1
+{
+    &#9642; &nbsp; Field
+}
+@section field2
+{
+    &#9642; &nbsp; Country
+}
+@section field3
+{
+    &#9642; &nbsp; Graduation Level
+}
+<br><br>
+<div class="DEGREE">
+    @{ Boolean NO_RESULT = true;}
+    @foreach (var DEGREE in ViewBag.GET_DEGREE)
+    {
+        NO_RESULT = false;
+        <div>
+            <h1>@DEGREE.TITLE</h1>
+            <h4>@DEGREE.UNIVERSITY_TITLE, <b>@DEGREE.COUNTRY_TITLE.ToUpper()</b> &#9873;</h4>
+            <h4>@DEGREE.FIELD_TITLE &nbsp; &#9642; &nbsp;
+             <b>@DEGREE.COURSE_TITLE Course</b> &nbsp; &#128366;</h4>
+            <p title="@DEGREE.LOCATION">&nbsp; &nbsp; &#9642; 
+             @if(DEGREE.LOCATION.Length > 40)
+             {
+                @DEGREE.LOCATION.Substring(0, 40)
+             }
+             else
+             {
+                 @DEGREE.LOCATION
+             }
+            </p>
+            <p>&nbsp; &nbsp; &#9642; @DEGREE.GRADUATION Program</p>
+            <p>&nbsp; &nbsp; &#9642; @DEGREE.DURATION duration</p>
+        </div>
+    }
+    @{ 
+        if(NO_RESULT)
+        {
+            <div>
+                <h1>&nbsp; Ooopsie!!! &#9785;</h1>
+                <h3>Try different Courses, this course has currently no offerings</h3>
+                <button class="light-btn" onclick="window.open('/Field','_self')">&#8672; GO BACK </button>
+            </div>
+        }
+    }
+</div>
